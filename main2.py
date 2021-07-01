@@ -22,12 +22,10 @@ def create_result_file(path):
         with open(sorted_file, 'r', encoding="utf-8") as data:
             text = data.read()
             with open('result.txt', 'a', encoding="utf-8") as result:
-                result.write(sorted_file)
-                result.write('\n')
-                result.write(str(sorted_files_dict[sorted_file]))
-                result.write('\n')
-                result.write(text)
-                result.write('\n')
+                result.write(sorted_file + '\n')
+                result.write(str(sorted_files_dict[sorted_file]) + '\n')
+                result.write(text + '\n')
+
     return None
 
 
